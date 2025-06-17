@@ -1,0 +1,39 @@
+/* custom.css */
+
+/* 🔹 Font family and color */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* 🔹 Style 1: Custom header color */
+h1, h2 {
+  color: #002D62;
+}
+
+/* 🔹 Style 2: Styled button */
+.custom-button {
+  background-color: #002D62;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  border: none;
+}
+
+/* 🔹 Style 3: Div block styling */
+.section-box {
+  background-color: white;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Style 4: Emphasis text */
+.highlight {
+  color: #D7263D;
+  font-weight: bold;
+}

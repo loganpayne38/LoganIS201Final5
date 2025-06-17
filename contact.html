@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Logan Payne - Contact</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Fonts and Bootstrap Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Bootstrap Theme -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Custom Styles -->
+    <link href="css/mystyle.css" rel="stylesheet" />
+    <style>
+      body {
+        background: linear-gradient(to bottom, #002D62, #ffffff);
+      }
+      .jeopardy-board {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        text-align: center;
+      }
+      .jeopardy-header {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .category {
+        font-weight: bold;
+        font-size: 1.25rem;
+        padding: 10px;
+        background-color: #002D62;
+        color: white;
+        border-radius: 5px;
+      }
+      .tile {
+        background-color: #1560bd;
+        color: white;
+        font-weight: bold;
+        padding: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .tile:hover {
+        background-color: #003f91;
+      }
+    </style>
+</head>
+<body class="d-flex flex-column">
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+  <div class="container px-5">
+    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Logan Payne</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#video">Watch Highlight</a></li>
+        <li class="nav-item"><a class="nav-link" href="#jeopardy">Play Jeopardy</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="flex-shrink-0">
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container px-5">
+            <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bolder">Get in Touch</h1>
+                    <p class="lead fw-normal text-muted mb-0">Contact me directly below.</p>
+                </div>
+                <div class="text-center">
+                    <p class="fs-5"><strong>Name:</strong> Logan Payne</p>
+                    <p class="fs-5"><strong>Phone:</strong> <a href="tel:8019999999">801 999 9999</a></p>
+                    <p class="fs-5"><strong>Email:</strong> <a href="mailto:gocougs@gmail.com">gocougs@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlight Video -->
+    <section id="video" class="py-5 bg-light">
+        <div class="container px-5 text-center">
+            <h2 class="fw-bolder mb-4">Highlight Video</h2>
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/ccLUMKbZCA0" title="Logan Payne Highlight" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Score Section -->
+    <section class="bg-primary text-white text-center py-4">
+        <h3>Your Score: <span id="score">0</span> points</h3>
+        <button class="btn btn-light mt-2" onclick="resetScore()">Reset Score</button>
+    </section>
+
+    <!-- Jeopardy Game -->
+    <section id="jeopardy" class="py-5 bg-white">
+        <div class="container px-5">
+            <h2 class="fw-bolder text-center mb-4">BYU Football Jeopardy</h2>
+            <div class="jeopardy-header">
+                <div class="category">History</div>
+                <div class="category">Players</div>
+                <div class="category">Stadium</div>
+            </div>
+            <div class="jeopardy-board">
+                <!-- Row 1 -->
+                <div class="tile" data-original="$100" onclick="flipTile(this, 'What year did BYU win the National Championship?', '1984')">$100</div>
+                <div class="tile" data-original="$100" onclick="flipTile(this, 'Who won the Heisman Trophy for BYU?', 'Ty Detmer')">$100</div>
+                <div class="tile" data-original="$100" onclick="flipTile(this, 'What is the name of BYU’s stadium?', 'LaVell Edwards Stadium')">$100</div>
+                <!-- Row 2 -->
+                <div class="tile" data-original="$200" onclick="flipTile(this, 'Who was BYU’s head coach before Kalani Sitake?', 'Bronco Mendenhall')">$200</div>
+                <div class="tile" data-original="$200" onclick="flipTile(this, 'Which BYU QB was drafted #2 overall in 2021?', 'Zach Wilson')">$200</div>
+                <div class="tile" data-original="$200" onclick="flipTile(this, 'What city is BYU located in?', 'Provo, Utah')">$200</div>
+                <!-- Row 3 -->
+                <div class="tile" data-original="$300" onclick="flipTile(this, 'How many games did BYU win in 2020?', '11')">$300</div>
+                <div class="tile" data-original="$300" onclick="flipTile(this, 'What number does Kingsley Suamataia wear?', '#78')">$300</div>
+                <div class="tile" data-original="$300" onclick="flipTile(this, 'What mountain overlooks the stadium?', 'Y Mountain')">$300</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-white py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto"><div class="small m-0">&copy; Logan Payne 2025</div></div>
+            <div class="col-auto">
+                <a class="small" href="#">Privacy</a>
+                <span class="mx-1">&middot;</span>
+                <a class="small" href="#">Terms</a>
+                <span class="mx-1">&middot;</span>
+                <a class="small" href="#jeopardy">Jeopardy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    let score = 0;
+
+    function flipTile(tile, question, answer) {
+        if (!tile.dataset.state || tile.dataset.state === "default") {
+            tile.innerHTML = question;
+            tile.dataset.state = "question";
+        } else if (tile.dataset.state === "question") {
+            tile.innerHTML = answer;
+            tile.dataset.state = "answer";
+
+            if (!tile.dataset.answered) {
+                const value = parseInt(tile.dataset.original.replace(/\D/g, "")) || 100;
+                score += value;
+                document.getElementById("score").textContent = score;
+                tile.dataset.answered = true;
+            }
+        }
+    }
+
+    function resetScore() {
+        score = 0;
+        document.getElementById("score").textContent = score;
+
+        const tiles = document.querySelectorAll('.tile');
+        tiles.forEach(tile => {
+            tile.innerHTML = tile.dataset.original || tile.innerHTML;
+            tile.dataset.state = "default";
+            tile.dataset.answered = false;
+        });
+    }
+</script>
+</body>
+</html>
